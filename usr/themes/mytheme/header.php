@@ -46,7 +46,7 @@
             <?php endif; ?>
         </a>
         <div class="navbar-menu">
-            <a href="https://docs.sun4lower.cn">laravel文档</a>
+            <!--<a href="https://docs.sun4lower.cn">laravel文档</a>-->
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while($pages->next()): ?>
 
