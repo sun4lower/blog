@@ -150,25 +150,32 @@ postDirectoryBuild();
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
+                var items = $("#post-content").find("h2, h3, h4, h5, h6");
+                var menu = $("#directory");
+                var firstMenu = $("#directory").find("a").eq(0).addClass("currentH");
 		$(window).scroll(function () {
-			var items = $("#post-content").find("h2, h3, h4, h5, h6");
-			var menu = $("#directory");
 			var top = $(document).scrollTop();
 			var currentId = ""; //滚动条现在所在位置的item id
 			items.each(function () {
 				var m = $(this);
+                                //console.log(m.attr("id"));
 				//注意：m.offset().top代表每一个item的顶部位置
-				if (top > m.offset().top) {
+                                //console.log(top);
+                                //console.log(m.offset().top);
+				if (top > m.offset().top-300) {
 					currentId = "#" + m.attr("id");
+                                        //console.log(currentId);
 				} else {
 					return false;
 				}
 			});
 
 			var currentLink = menu.find(".currentH");
+                        //console.log(currentId);
+                        //console.log(currentLink);
 			if (currentId && currentLink.attr("href") != currentId) {
-				currentLink.removeClass("currentH");
-				menu.find("[href=" + currentId + "]").addClass("currentH");
+                                currentLink.removeClass("currentH");
+				menu.find("[href=\'"+currentId+"\']").addClass("currentH");
 			}
 		});
 	});
