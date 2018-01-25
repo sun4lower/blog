@@ -147,6 +147,32 @@ var postDirectoryBuild = function() {
 };
 postDirectoryBuild();
 </script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			var items = $("#post-content").find("h2, h3, h4, h5, h6");
+			var menu = $("#directory");
+			var top = $(document).scrollTop();
+			var currentId = ""; //滚动条现在所在位置的item id
+			items.each(function () {
+				var m = $(this);
+				//注意：m.offset().top代表每一个item的顶部位置
+				if (top > m.offset().top) {
+					currentId = "#" + m.attr("id");
+				} else {
+					return false;
+				}
+			});
+
+			var currentLink = menu.find(".currentH");
+			if (currentId && currentLink.attr("href") != currentId) {
+				currentLink.removeClass("currentH");
+				menu.find("[href=" + currentId + "]").addClass("currentH");
+			}
+		});
+	});
+</script>
 <?php endif; ?>
 <?php if(($this->is('single')) && ($this->allow('comment'))): ?>
 <script>
