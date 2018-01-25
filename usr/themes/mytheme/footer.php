@@ -32,6 +32,9 @@
                         <?php endif; ?>
                     </a>
 					<div class="info-text">
+						<?php if ($this->options->footworkSet == 'able'): ?>
+						<p id="yephy"></p>
+						<?php endif; ?>
                     	<p>Theme is <a href="https://github.com/chakhsu/pinghsu" target="_blank">Pinghsu</a> by <a href="https://www.linpx.com/" target="_blank">Chakhsu</a></p>
 						<p>Powered by <a href="http://www.typecho.org" target="_blank" rel="nofollow">Typecho</a></p>
 						<p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></p>
@@ -366,6 +369,7 @@ InstantClick.on('change', function(isInitialLoad){
 InstantClick.init('mousedown');
 </script>
 <?php endif; ?>
+<script src="js/randtext.js"></script>
 </body>
 </html>
 <?php if ($this->options->htmlCompress == 'able'): $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); endif; ?>

@@ -14,6 +14,13 @@ function themeConfig($form) {
     $searchPage = new Typecho_Widget_Helper_Form_Element_Text('searchPage', NULL, NULL, _t('搜索页地址'), _t('输入你的 Template Page of Search 的页面地址,记得带上 http:// 或 https://'));
     $form->addInput($searchPage->addRule('xssCheck', _t('请不要在链接中使用特殊字符')));
 
+    $footworkSet = new Typecho_Widget_Helper_Form_Element_Radio('footworkSet',
+        array('able' => _t('启用'),
+            'disable' => _t('禁止'),
+        ),
+        'disable', _t('页尾个性化文字设置'), _t('默认禁止，若启用则会在页尾显示动态的组合文字'));
+    $form->addInput($footworkSet);
+
     $pjaxSet = new Typecho_Widget_Helper_Form_Element_Radio('pjaxSet',
         array('able' => _t('启用'),
             'disable' => _t('禁止'),
