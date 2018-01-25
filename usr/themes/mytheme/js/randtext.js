@@ -19,8 +19,8 @@ var yephy = function (r) {
         var t = o[c.skillI];
         c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
     }
-    var l = "I work with ",
-        o = ["Front-End", "JavaScript", "HTML & CSS", "Node.js", "React", "passion & love"].map(function (r) {
+    var l = "I Love ",
+        o = ["PHP", "Laravel", "C", "C++", "Linux", "Front-End", "JavaScript", "HTML & CSS", "Node.js", "MySQL", "Swoole"].map(function (r) {
             return r + "."
         }),
         a = 2,

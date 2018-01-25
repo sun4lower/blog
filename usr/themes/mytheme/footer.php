@@ -369,7 +369,7 @@ InstantClick.on('change', function(isInitialLoad){
 InstantClick.init('mousedown');
 </script>
 <?php endif; ?>
-<script src="js/randtext.js"></script>
+<script src="/usr/themes/mytheme/js/randtext.js"></script>
 </body>
 </html>
 <?php if ($this->options->htmlCompress == 'able'): $html_source = ob_get_contents(); ob_clean(); print compressHtml($html_source); ob_end_flush(); endif; ?>
