@@ -22,7 +22,7 @@ $this->need('header.php');
 						<div class="post-lists-body">
 						<?php while($catlist->next()): ?>
 							<div class="post-list-item">
-								<div class="post-list-item-container">
+								<div class="post-list-item-container btn paper-lift" style="overflow:visible;">
 									<div class="item-label">
 										<div class="item-title"><a href="<?php $catlist->permalink() ?>"><?php $catlist->title() ?></a></div>
 										<div class="item-meta clearfix">
