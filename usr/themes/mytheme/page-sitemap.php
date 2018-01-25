@@ -68,7 +68,7 @@
   </div>
   <div id="footer">查看博客首页: <strong><a href="<?php $this->options ->siteUrl(); ?>"><?php $this->options->title() ?></a></strong></div><br />
   <center>
-    <div style="text-algin: center; font-size: 11px"><br /> &copy; <?php echo date('Y'); ?> <strong><a href="<?php $this->options ->siteUrl(); ?>" target="_blank">YephyBlog</a></strong> <?php $this->options->title() ?><br /><br /><br />
+    <div style="text-algin: center; font-size: 11px"><br /> &copy; <?php echo date('Y'); ?> <strong><a href="<?php $this->options ->siteUrl(); ?>" target="_blank"><?php $this->options->title() ?></a></strong> 版权所有<br /><br /><br />
     </div>
   </center>
 </body>
