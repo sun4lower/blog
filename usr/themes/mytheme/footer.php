@@ -59,7 +59,9 @@
 
 <?php if (($this->options->tableOfContents == 'able') && ($this->is('post'))): ?>
 <div id="directory-content" class="directory-content">
-    <div id="directory"></div>
+    <div id="directory">
+        <div id="highlight_currentH"></div>
+    </div>
 </div>
 <script>
 var postDirectoryBuild = function() {
@@ -179,9 +181,20 @@ postDirectoryBuild();
                         //console.log(currentLink);
 			if (currentId && currentLink.attr("href") != currentId) {
                                 currentLink.removeClass("currentH");
-				menu.find("[href=\'"+currentId+"\']").addClass("currentH");
+                                var newCurrentH = menu.find("[href=\'"+currentId+"\']");
+                                //console.log(menu.find("[href=\'"+currentId+"\']").offset().top - menu.offset().top);
+				var topH = newCurrentH.offset().top - menu.offset().top;
+                                newCurrentH.addClass("currentH");
+                                $("#highlight_currentH").css('top', topH);
 			}
 		});
+                $("#directory a").click(function(){
+console.log(33333333);
+                        var gotoH = $($(this).attr("href")).offset().top - 280;
+                        $("html,body").animate({scrollTop: gotoH}, 100);
+                        return false;
+console.log(66666666);
+                });
 	});
 </script>
 <?php endif; ?>
