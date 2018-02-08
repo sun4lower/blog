@@ -8,6 +8,8 @@ function themeConfig($form) {
     $form->addInput($footerLogoUrl->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('favicon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置favicon'));
     $form->addInput($favicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
+    $bei=new Typecho_Widget_Helper_Form_Element_Text('bei', NULL, NULL, _t('工信部备案号'), _t('一般为 京ICP备18007781号-1，留空则不显示'));
+    $form->addInput($bei->addRule('xssCheck', _t('工信部备案号不能使用特殊字符')));
     $iosicon = new Typecho_Widget_Helper_Form_Element_Text('iosicon', NULL, NULL, _t('apple touch icon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置Apple Touch Icon'));
     $form->addInput($iosicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
 
