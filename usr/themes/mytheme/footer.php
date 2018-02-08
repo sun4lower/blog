@@ -10,7 +10,7 @@
             <?php if ($this->options->socialzhihu): ?>
                 <a class="social zhihu" target="blank" href="<?php $this->options->socialzhihu(); ?>">ZHIHU</a>
             <?php endif; ?>
-                <a class="social rss" target="blank" href="<?php $this->options->siteUrl(); ?>feed/">RSS</a>
+                <!--<a class="social rss" target="blank" href="<?php $this->options->siteUrl(); ?>feed/">RSS</a>-->
 			<?php if ($this->options->socialgithub): ?>
 				<a class="social github" target="blank" href="<?php $this->options->socialgithub(); ?>">GITHUB</a>
 			<?php endif; ?>
