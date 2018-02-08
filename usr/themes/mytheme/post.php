@@ -39,7 +39,7 @@
 </div>
 <?php else : ?>
 <div class="post-header-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (array_key_exists('green',unserialize($this->___fields()))): ?> bg-green<?php elseif (array_key_exists('red',unserialize($this->___fields()))): ?> bg-red<?php elseif (array_key_exists('yellow',unserialize($this->___fields()))): ?> bg-yellow<?php elseif (array_key_exists('blue',unserialize($this->___fields()))): ?> bg-blue<?php elseif (array_key_exists('purple',unserialize($this->___fields()))): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>">
-	<div class="post-header-thumb-op" style="background-image:url(<?php echo 'http://img-sun4lower.oss-cn-hangzhou.aliyuncs.com/thumbs/'.mt_rand(0,102).'.jpg'; ?>);"></div>
+	<div class="post-header-thumb-op" style="background-image:url(<?php echo 'https://img-sun4lower.oss-cn-hangzhou.aliyuncs.com/thumbs/'.mt_rand(0,102).'.jpg'; ?>);"></div>
 	<div class="post-header-thumb-cover">
 		<div class="post-header-thumb-container">
 			<div class="post-header-thumb-title">
